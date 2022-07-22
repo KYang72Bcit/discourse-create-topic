@@ -1,5 +1,9 @@
-{{create-topic-buttons
-    action=(action "tmp")
-  }}
-
-  <p>test out if that works</p>
+{{!-- {{#if canCreateTopic}} --}}
+  {{d-button
+    class=btnClass
+    id="create-topic-button"
+    action=(route-action "showLogin")
+    icon="plus"
+    disabled=disabled
+    label=label}}
+{{!-- {{/if}} --}}
