@@ -1,9 +1,22 @@
 {{!-- {{#if canCreateTopic}} --}}
-  {{d-button
+{{#if hideLoggedIn}}
+{{d-button
+    class=btnClass
+    id="create-topic-button"
+    action=(route-action "createTopic")
+    icon="plus"
+    disabled=disabled
+    label=label}}
+  
+{{else}}
+{{d-button
     class=btnClass
     id="create-topic-button"
     action=(route-action "showLogin")
     icon="plus"
     disabled=disabled
     label=label}}
+  
+{{/if}}
+  
 {{!-- {{/if}} --}}
