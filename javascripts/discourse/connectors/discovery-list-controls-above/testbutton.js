@@ -6,6 +6,7 @@ export default Component.extend({
 
   @discourseComputed("currentUser")
   hideLoggedIn(currentUser) {
+    console.log(currentUser);
     return (
       (currentUser ? true : false)
     );
