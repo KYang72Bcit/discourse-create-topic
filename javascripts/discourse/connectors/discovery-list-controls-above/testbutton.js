@@ -146,7 +146,7 @@ export default Component.extend(FilterModeMixin, {
         topicCategory
       });
     },
-    
+
     changeCategoryNotificationLevel(notificationLevel) {
       this.category.setNotification(notificationLevel);
     },
@@ -163,11 +163,12 @@ export default Component.extend(FilterModeMixin, {
     },
 
     clickCreateTopicButton() {
-      if (this.categoryReadOnlyBanner && !this.hasDraft) {
-        bootbox.default.alert(this.categoryReadOnlyBanner);
-      } else {
-        this.createTopic();
-      }
+      console.log("hello world");
+      // if (this.categoryReadOnlyBanner && !this.hasDraft) {
+      //   bootbox.default.alert(this.categoryReadOnlyBanner);
+      // } else {
+      //   this.createTopic();
+      // }
     },
   },
 });
