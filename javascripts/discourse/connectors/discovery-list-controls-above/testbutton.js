@@ -129,6 +129,24 @@ export default Component.extend(FilterModeMixin, {
   },
 
   actions: {
+    createTopic(searchTerm) {
+      let topicCategory;
+
+      if (searchTerm.indexOf("category:") !== -1) {
+        const match = searchTerm.match(/category:(\S*)/);
+
+        if (match && match[1]) {
+          topicCategory = match[1];
+        }
+      }
+
+      this.composer.open({
+        action: _composer.default.CREATE_TOPIC,
+        draftKey: _composer.default.NEW_TOPIC_KEY,
+        topicCategory
+      });
+    },
+    
     changeCategoryNotificationLevel(notificationLevel) {
       this.category.setNotification(notificationLevel);
     },
