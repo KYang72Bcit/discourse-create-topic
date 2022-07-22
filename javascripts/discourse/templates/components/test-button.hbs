@@ -1,4 +1,4 @@
-{{!-- 
+
 {{#if hideLoggedIn}}
 
     {{d-button
@@ -19,9 +19,9 @@
     label=label}}
  
 {{/if}}
-   --}}
+  
 
-{{#unless hideLoggedIn}}
+{{!-- {{#unless hideLoggedIn}}
 {{d-button
     class=btnClass
     id="create-topic-button-2"
@@ -31,7 +31,7 @@
     label=label}}
 
   
-{{!-- {{else}}
+{{else}}
 
 {{d-button
     class=btnClass
@@ -39,6 +39,6 @@
     action=(route-action "createTopic")
     icon="plus"
     disabled=disabled
-    label=label}} --}}
+    label=label}}
   
-{{/unless}}
+{{/unless}} --}}
