@@ -162,7 +162,7 @@ export default Component.extend(FilterModeMixin, {
       }
     },
 
-    clickCreateTopicButton() {
+    tmp() {
       console.log("hello world");
       // if (this.categoryReadOnlyBanner && !this.hasDraft) {
       //   bootbox.default.alert(this.categoryReadOnlyBanner);
