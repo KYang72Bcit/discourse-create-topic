@@ -1,12 +1,6 @@
-{{!-- {{#if canCreateTopic}} --}}
+{{!-- 
 {{#if hideLoggedIn}}
-{{!-- {{d-button
-    class=btnClass
-    id="create-topic-button-1"
-    action=(route-action "createTopic")
-    icon="plus"
-    disabled=disabled
-    label=label}} --}}
+
     {{d-button
     class=btnClass
     id="create-topic-button-2"
@@ -23,14 +17,28 @@
     icon="plus"
     disabled=disabled
     label=label}}
-{{!-- {{d-button
+ 
+{{/if}}
+   --}}
+
+{{#unless hideLoggedIn}}
+{{d-button
     class=btnClass
     id="create-topic-button-2"
     action=(route-action "showLogin")
     icon="plus"
     disabled=disabled
-    label=label}} --}}
+    label=label}}
+
   
-{{/if}}
+{{else}}
+
+{{d-button
+    class=btnClass
+    id="create-topic-button-1"
+    action=(route-action "createTopic")
+    icon="plus"
+    disabled=disabled
+    label=label}}
   
-{{!-- {{/if}} --}}
+{{/unless}}
