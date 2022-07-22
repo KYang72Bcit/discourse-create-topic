@@ -146,7 +146,7 @@ export default Component.extend(FilterModeMixin, {
 
     clickCreateTopicButton() {
       if (this.categoryReadOnlyBanner && !this.hasDraft) {
-        bootbox.alert(this.categoryReadOnlyBanner);
+        bootbox.default.alert(this.categoryReadOnlyBanner);
       } else {
         this.createTopic();
       }
